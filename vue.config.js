@@ -1,4 +1,4 @@
-const ProxyUrl = 'http://172.31.254.44:8081'
+const ProxyUrl = 'http://0.0.0:8081'  // 代理地址
 module.exports = {
     publicPath: './',
     lintOnSave: false,

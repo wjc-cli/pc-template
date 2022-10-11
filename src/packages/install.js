@@ -110,7 +110,6 @@ import LsIconWarning from "./icons/icon-font/svg-warn.vue";
 /* 
     框架基础组件
 */
-import LsInput from "./input/index.vue";
 import LsForm from "./form/index.vue";
 import LsButton from "./button/index.vue";
 import LsDrawer from "./draw/index.vue";
@@ -214,7 +213,6 @@ const comp = [
     LsIconSelect,
     LsIconSuccess,
     LsIconWarning,
-    LsInput,
     LsForm,
     LsButton,
     LsDrawer,

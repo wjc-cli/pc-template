@@ -13,13 +13,14 @@ export default defineComponent({
         const i = href.indexOf("?");
         const search = href.substr(i + 1);
         const query = qs.parse(search);
-        const { code, toonType, OCM_USER_TOKEN } = query;
-        if (code && toonType) {
+        const { code, type, token } = query;
+        // 多平台对接参数 自行修改
+        if (code && type) {   // 对接参数  自行修改
             store.commit("setToonType", toonType);
             store.dispatch("loginFn", code);
             sessionStorage["env"] = "zg";
-        } else if (OCM_USER_TOKEN) {
-            store.dispatch("loginYFn", OCM_USER_TOKEN);
+        } else if (token) {  // 对接参数  自行修改
+            store.dispatch("loginYFn", token);
             sessionStorage["env"] = "yg";
         } else {
             const { proxy } = getCurrentInstance();

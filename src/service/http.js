@@ -3,7 +3,7 @@ import Notice from "../packages/message/mountMessage";
 const isDev = process.env.NODE_ENV === "development";
 const addHeader = () => {
     const authorization = sessionStorage["gray-token"];
-    const name = sessionStorage["env"] === "zg" ? "authorization" : "ocmtoken";
+    const name = sessionStorage["env"] === "zg" ? "authorization" : "token";
     return {
         [name]: authorization,
     };
@@ -17,7 +17,7 @@ export const get = (url, params = {}, opt = {}) => {
 };
 
 export const formatUrl = path => {
-    return isDev ? path : "/opmp-manage" + path;
+    return isDev ? path : "/path" + path;
     // return path
 };
 // 响应拦截器
